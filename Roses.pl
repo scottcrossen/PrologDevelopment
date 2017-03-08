@@ -73,7 +73,7 @@ solve :-
   tell(leroy, LeroyRose, LeroyEvent, LeroyItem),
   tell(stella, StellaRose, StellaEvent, StellaItem).
 
-% Define helper funciton
+% Define helper functions
 all_different([H | T]) :- member(H,T), !, fail.
 all_different([_ | T]) :- all_different(T).
 all_different([_]).
