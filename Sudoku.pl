@@ -72,7 +72,7 @@ getCube(Board, Number, AsList) :-
 
 % Helper function to get row by index
 getRow(Board, Number, AsList) :-
-    sublist(Board, Number, Number, AsList)
+    sublist(Board, Number, Number, AsList).
 
 % Helper function to split a row into each square.
 split([H | T], H, T).
@@ -94,15 +94,15 @@ solveSquare(Square,Row,Col,Cube) :-
 % Main solve function
 solve(Board) :-
     % Introduce variables for each row.
-    getRow(Board, 0, R0)
-    getRow(Board, 1, R1)
-    getRow(Board, 2, R2)
-    getRow(Board, 3, R3)
-    getRow(Board, 4, R4)
-    getRow(Board, 5, R5)
-    getRow(Board, 6, R6)
-    getRow(Board, 7, R7)
-    getRow(Board, 8, R8)
+    getRow(Board, 0, R0),
+    getRow(Board, 1, R1),
+    getRow(Board, 2, R2),
+    getRow(Board, 3, R3),
+    getRow(Board, 4, R4),
+    getRow(Board, 5, R5),
+    getRow(Board, 6, R6),
+    getRow(Board, 7, R7),
+    getRow(Board, 8, R8),
 
     % Introduce variables for each column.
     columnAsList(Board, 0, C0),
