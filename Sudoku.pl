@@ -89,7 +89,7 @@ splitRows(Board, R0, R1, R2, R3, R4, R5, R6, R7, R8) :-
 
 % Helper function to solve for each item
 solveItem(Square,Row,Col,Cube) :-
-      (nonvar(Square), write("Found set value"),nl,write(Square),nl,printBoard(Row),nl,printBoard(Col),nl,printBoard(Cube),nl; var(Square), digit(Square), is_set(Row), is_set(Col), is_set(Cube)).
+      (nonvar(Square); var(Square), digit(Square), is_set(Row), is_set(Col), is_set(Cube)).
 solveSquare(Board, XPos, YPos):-
       getRow(Board, YPos, Row),
       columnAsList(Board, XPos, Col),
